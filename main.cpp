@@ -6,20 +6,20 @@ using namespace std;
 
 int main() {
 
-    //PersonalBudget personalBudget;
+    PersonalBudget personalBudget("users.xml", "incomes.xml", "expenses.xml");
 
-    char wybor;
+    char choice;
 
     while (true) {
-        if (!personalBudget.czyUzytkownikJestZalogowany()) {
-            wybor = personalBudget.wybierzOpcjeZMenuGlownego();
+        if (!personalBudget.isUserLoggedIn()) {
+            choice = personalBudget.selectOptionFromMainMenu();
 
-            switch (wybor) {
+            switch (choice) {
             case '1':
-                personalBudget.rejestracjaUzytkownika();
+                personalBudget.userRegistration();
                 break;
             case '2':
-                personalBudget.logowanieUzytkownika();
+                personalBudget.userLogging();
                 break;
             case '9':
                 exit(0);
@@ -30,32 +30,29 @@ int main() {
                 break;
             }
         } else {
-            wybor = personalBudget.wybierzOpcjeZMenuUzytkownika();
+            choice = personalBudget.selectOptionFromUserMenu();
 
-            switch (wybor) {
+            switch (choice) {
             case '1':
-                //personalBudget.dodajAdresata();
+                personalBudget.addIncome();
                 break;
             case '2':
-                //personalBudget.wyszukajAdresatowPoImieniu();
+                personalBudget.addExpense();
                 break;
             case '3':
-                //personalBudget.wyszukajAdresatowPoNazwisku();
+                personalBudget.viewCurrentMonthBalance();
                 break;
             case '4':
-                //personalBudget.wyswietlWszystkichAdresatow();
+                personalBudget.viewPreviousMonthBalance();
                 break;
             case '5':
-                //personalBudget.usunAdresata();
+                personalBudget.viewSelectedPeriodBalance();
                 break;
             case '6':
-                //personalBudget.edytujAdresata();
+                personalBudget.changePasswordLoggedUser();
                 break;
             case '7':
-                //personalBudget.zmianaHaslaZalogowanegoUzytkownika();
-                break;
-            case '8':
-                //personalBudget.wylogowanieUzytkownika();
+                personalBudget.userLogout();
                 break;
             }
         }
