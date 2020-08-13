@@ -9,10 +9,10 @@ class Sales {
     int userId;
     int date;
     string item;
-    string amount;
+    float amount;
 
 public:
-    Sales(int userId = 0, int date = 0, string item = "", string amount = "") {
+    Sales(int userId = 0, int date = 0, string item = "", float amount = 0) {
         this->userId = userId;
         this->date = date;
         this->item = item;
@@ -24,12 +24,12 @@ public:
     void setUserId(int newUserId);
     void setDate(int newDate);
     void setItem(string newItem);
-    void setAmount(string newAmount);
+    void setAmount(float newAmount);
 
     int getUserId();
     int getDate();
     string getItem();
-    string getAmount();
+    float getAmount();
 };
 
 #endif

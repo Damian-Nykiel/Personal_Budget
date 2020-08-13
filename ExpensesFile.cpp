@@ -2,6 +2,7 @@
 
 bool ExpensesFile::writeExpenseToFile(Expense expense) {
     string date = dateManager.intToStringDate(expense.getDate());
+    string stringAmount = AuxiliaryMethods::conversionFloatToString(expense.getAmount());
 
     bool fileExsits = xml.Load(getFileName());
     if(!fileExsits) {
@@ -16,7 +17,7 @@ bool ExpensesFile::writeExpenseToFile(Expense expense) {
     xml.AddElem("userId", expense.getUserId());
     xml.AddElem("date", date);
     xml.AddElem("item", expense.getItem());
-    xml.AddElem("amount", expense.getAmount());
+    xml.AddElem("amount", stringAmount);
     xml.Save(getFileName());
 
     lastExpenseId++;
@@ -27,6 +28,7 @@ vector <Expense> ExpensesFile::loadExpensesFromFile(int loggedUserId) {
     Expense expense;
     int currentExpenseId = 0;
     int date = 0;
+    float amount = 0;
 
     xml.Load(getFileName());
 
@@ -49,7 +51,8 @@ vector <Expense> ExpensesFile::loadExpensesFromFile(int loggedUserId) {
             xml.FindElem( "item" );
             expense.setItem(xml.GetData());
             xml.FindElem( "amount" );
-            expense.setAmount(xml.GetData());
+            amount = AuxiliaryMethods::conversionStringToFloat(xml.GetData());
+            expense.setAmount(amount);
             xml.OutOfElem();
             expenses.push_back(expense);
         } else

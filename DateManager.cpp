@@ -38,13 +38,13 @@ int DateManager::getCurrentYear() {
 }
 
 bool DateManager::checkDateIsCorrect(string date) {
-    string year = date.substr(0,4);
-    string month = date.substr(5,2);
-    string day = date.substr(8,2);
 
     if (date.length() != 10 || date[4] != '-' || date[7] != '-') {
         return false;
     }
+    string year = date.substr(0,4);
+    string month = date.substr(5,2);
+    string day = date.substr(8,2);
 
     if (isYearLeap(AuxiliaryMethods::conversionStringToInt(year)) && month == "02") {
         if (day >= "01" && day <= "29")

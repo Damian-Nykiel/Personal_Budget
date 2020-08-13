@@ -58,10 +58,7 @@ void PersonalBudget::viewSelectedPeriodBalance() {
 }
 
 bool PersonalBudget::isUserLoggedIn() {
-    if (userManager.isUserLoggedIn())
-        return true;
-    else
-        return false;
+    return (userManager.isUserLoggedIn()) ? true : false;
 }
 
 char PersonalBudget::selectOptionFromMainMenu() {

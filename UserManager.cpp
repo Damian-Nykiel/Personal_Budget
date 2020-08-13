@@ -41,10 +41,7 @@ User UserManager::giveNewUserDetails() {
 }
 
 int UserManager::getNewUserId() {
-    if (users.empty() == true)
-        return 1;
-    else
-        return users.back().getId() + 1;
+    return (users.empty()) ? 1 : users.back().getId() + 1;
 }
 
 bool UserManager::isLoginExist(string login) {
@@ -106,10 +103,7 @@ void UserManager::userLogout() {
 }
 
 bool UserManager::isUserLoggedIn() {
-    if (loggedUserId > 0)
-        return true;
-    else
-        return false;
+    return (loggedUserId > 0) ? true : false;
 }
 
 int UserManager::getLoggedUserId() {

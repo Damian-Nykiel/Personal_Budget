@@ -26,7 +26,8 @@ class IncomesAndExpensesManager {
 
     Income getNewIncomeDetails();
     Expense getNewExpenseDetails();
-    string checkAmount(string amount);
+    string changeDotToComma(string text);
+    bool isAmountANumber(string stringAmount);
     float selectedMonthIncomes(int month);
     float selectedMonthExpenses(int month);
     float selectedPeroidIncomes(int startingDate, int endDate);

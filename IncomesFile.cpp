@@ -2,6 +2,7 @@
 
 bool IncomesFile::writeIncomeToFile(Income income) {
     string date = dateManager.intToStringDate(income.getDate());
+    string stringAmount = AuxiliaryMethods::conversionFloatToString(income.getAmount());
 
     bool fileExsits = xml.Load(getFileName());
     if(!fileExsits) {
@@ -16,7 +17,7 @@ bool IncomesFile::writeIncomeToFile(Income income) {
     xml.AddElem("userId", income.getUserId());
     xml.AddElem("date", date);
     xml.AddElem("item", income.getItem());
-    xml.AddElem("amount", income.getAmount());
+    xml.AddElem("amount", stringAmount);
     xml.Save(getFileName());
 
     lastIncomeId++;
@@ -27,6 +28,7 @@ vector <Income> IncomesFile::loadIncomesFromFile(int loggedUserId) {
     Income income;
     int currentIncomeId = 0;
     int date = 0;
+    float amount = 0;
 
     xml.Load(getFileName());
 
@@ -49,7 +51,8 @@ vector <Income> IncomesFile::loadIncomesFromFile(int loggedUserId) {
             xml.FindElem( "item" );
             income.setItem(xml.GetData());
             xml.FindElem( "amount" );
-            income.setAmount(xml.GetData());
+            amount = AuxiliaryMethods::conversionStringToFloat(xml.GetData());
+            income.setAmount(amount);
             xml.OutOfElem();
             incomes.push_back(income);
         } else

@@ -50,7 +50,7 @@ string AuxiliaryMethods::changeFirstLetterToUpperOtherToLower(string text) {
 
 string AuxiliaryMethods::loadNumber(string text, int characterPosition) {
     string number = "";
-    while(isdigit(text[characterPosition]) == true) {
+    while(isdigit(text[characterPosition])) {
         number += text[characterPosition];
         characterPosition ++;
     }
@@ -74,4 +74,10 @@ int AuxiliaryMethods::loadIntegerNumber() {
 
 float AuxiliaryMethods::conversionStringToFloat(string tekst) {
     return atof(tekst.c_str());
+}
+
+string AuxiliaryMethods::conversionFloatToString(float myFloat) {
+    stringstream ss;
+    ss << myFloat;
+    return ss.str();
 }

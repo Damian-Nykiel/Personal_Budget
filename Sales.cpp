@@ -15,7 +15,7 @@ void Sales::setItem(string newItem) {
     item = newItem;
 }
 
-void Sales::setAmount(string newAmount) {
+void Sales::setAmount(float newAmount) {
     amount = newAmount;
 }
 
@@ -31,6 +31,6 @@ string Sales::getItem() {
     return item;
 }
 
-string Sales::getAmount() {
+float Sales::getAmount() {
     return amount;
 }

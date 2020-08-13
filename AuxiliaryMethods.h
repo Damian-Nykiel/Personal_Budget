@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include <string>
 
 using namespace std;
 
@@ -17,6 +18,7 @@ public:
     static string loadNumber(string tekst, int pozycjaZnaku);
     static string changeFirstLetterToUpperOtherToLower(string tekst);
     static float conversionStringToFloat (string tekst);
+    static string conversionFloatToString(float myFloat);
 };
 
 #endif
