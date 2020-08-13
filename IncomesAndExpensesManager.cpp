@@ -8,10 +8,9 @@ void IncomesAndExpensesManager::addIncome() {
     income = getNewIncomeDetails();
 
     incomes.push_back(income);
-    if (incomesFile.writeIncomeToFile(income))
-        cout << "Nowy przychod zostal dodany" << endl;
-    else
-        cout << "Blad. Nie udalo sie dodac nowego przychodu do pliku." << endl;
+    incomesFile.writeIncomeToFile(income);
+    cout << "Nowy przychod zostal dodany" << endl;
+
     system("pause");
 }
 
@@ -73,10 +72,9 @@ void IncomesAndExpensesManager::addExpense() {
     expense = getNewExpenseDetails();
 
     expenses.push_back(expense);
-    if (expensesFile.writeExpenseToFile(expense))
-        cout << "Nowy wydatek zostal dodany" << endl;
-    else
-        cout << "Blad. Nie udalo sie dodac nowego wydatku do pliku." << endl;
+    expensesFile.writeExpenseToFile(expense);
+    cout << "Nowy wydatek zostal dodany" << endl;
+
     system("pause");
 }
 

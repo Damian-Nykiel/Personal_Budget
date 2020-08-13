@@ -1,6 +1,6 @@
 #include "IncomesFile.h"
 
-bool IncomesFile::writeIncomeToFile(Income income) {
+void IncomesFile::writeIncomeToFile(Income income) {
     string date = dateManager.intToStringDate(income.getDate());
     string stringAmount = AuxiliaryMethods::conversionFloatToString(income.getAmount());
 

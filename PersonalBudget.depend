@@ -1,0 +1,143 @@
+# depslib dependency file v1.0
+1597251895 source:c:\users\damian\desktop\personal_budget\auxiliarymethods.cpp
+	"AuxiliaryMethods.h"
+
+1597251153 c:\users\damian\desktop\personal_budget\auxiliarymethods.h
+	<iostream>
+	<sstream>
+	<algorithm>
+	<string>
+
+1597252557 source:c:\users\damian\desktop\personal_budget\datemanager.cpp
+	"DateManager.h"
+
+1597162891 c:\users\damian\desktop\personal_budget\datemanager.h
+	<iostream>
+	<ctime>
+	"AuxiliaryMethods.h"
+
+1595272687 source:c:\users\damian\desktop\personal_budget\expense.cpp
+	"Expense.h"
+
+1595272689 c:\users\damian\desktop\personal_budget\expense.h
+	<iostream>
+	"Sales.h"
+
+1597248223 c:\users\damian\desktop\personal_budget\sales.h
+	<iostream>
+
+1597326641 source:c:\users\damian\desktop\personal_budget\expensesfile.cpp
+	"ExpensesFile.h"
+
+1597326641 c:\users\damian\desktop\personal_budget\expensesfile.h
+	<iostream>
+	<fstream>
+	<vector>
+	<cstdlib>
+	"Expense.h"
+	"XMLFile.h"
+	"AuxiliaryMethods.h"
+	"DateManager.h"
+
+1597178247 c:\users\damian\desktop\personal_budget\xmlfile.h
+	<iostream>
+	<fstream>
+	"Markup.h"
+
+1303070812 c:\users\damian\desktop\personal_budget\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1597162891 source:c:\users\damian\desktop\personal_budget\income.cpp
+	"Income.h"
+
+1597162891 c:\users\damian\desktop\personal_budget\income.h
+	<iostream>
+	"Sales.h"
+
+1597326641 source:c:\users\damian\desktop\personal_budget\incomesandexpensesmanager.cpp
+	"IncomesAndExpensesManager.h"
+
+1597258906 c:\users\damian\desktop\personal_budget\incomesandexpensesmanager.h
+	<iostream>
+	<sstream>
+	<vector>
+	<windows.h>
+	<iomanip>
+	"Income.h"
+	"Expense.h"
+	"IncomesFile.h"
+	"ExpensesFile.h"
+	"DateManager.h"
+
+1597326641 c:\users\damian\desktop\personal_budget\incomesfile.h
+	<iostream>
+	<fstream>
+	<vector>
+	<cstdlib>
+	"Income.h"
+	"XMLFile.h"
+	"AuxiliaryMethods.h"
+	"DateManager.h"
+
+1597326641 source:c:\users\damian\desktop\personal_budget\incomesfile.cpp
+	"IncomesFile.h"
+
+1597162891 source:c:\users\damian\desktop\personal_budget\main.cpp
+	<iostream>
+	"PersonalBudget.h"
+
+1597176902 c:\users\damian\desktop\personal_budget\personalbudget.h
+	<iostream>
+	"UserManager.h"
+	"IncomesAndExpensesManager.h"
+
+1597162891 c:\users\damian\desktop\personal_budget\usermanager.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<windows.h>
+	"User.h"
+	"UsersFile.h"
+
+1595166361 c:\users\damian\desktop\personal_budget\user.h
+	<iostream>
+
+1597176902 c:\users\damian\desktop\personal_budget\usersfile.h
+	<iostream>
+	<fstream>
+	<vector>
+	<cstdlib>
+	"User.h"
+	"XMLFile.h"
+	"AuxiliaryMethods.h"
+
+1303070812 source:c:\users\damian\desktop\personal_budget\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1597246944 source:c:\users\damian\desktop\personal_budget\personalbudget.cpp
+	"PersonalBudget.h"
+
+1597248223 source:c:\users\damian\desktop\personal_budget\sales.cpp
+	"Sales.h"
+
+1597162891 source:c:\users\damian\desktop\personal_budget\user.cpp
+	"User.h"
+
+1597247187 source:c:\users\damian\desktop\personal_budget\usermanager.cpp
+	"UserManager.h"
+
+1597176764 source:c:\users\damian\desktop\personal_budget\usersfile.cpp
+	"UsersFile.h"
+
+1594559049 source:c:\users\damian\desktop\personal_budget\xmlfile.cpp
+	"XMLFile.h"
+

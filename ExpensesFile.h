@@ -21,7 +21,7 @@ public:
     ExpensesFile(string fileNameOfExpenses) : XMLFile(fileNameOfExpenses) {
         lastExpenseId = 0;
     };
-    bool writeExpenseToFile(Expense expense);
+    void writeExpenseToFile(Expense expense);
     vector <Expense> loadExpensesFromFile(int loggedUserId);
     int getLastExpenseId();
 };

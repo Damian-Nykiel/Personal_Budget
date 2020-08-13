@@ -21,7 +21,7 @@ public:
     IncomesFile(string fileNameOfIncomes) : XMLFile(fileNameOfIncomes) {
         lastIncomeId = 0;
     };
-    bool writeIncomeToFile(Income income);
+    void writeIncomeToFile(Income income);
     vector <Income> loadIncomesFromFile(int loggedUserId);
     int getLastIncomeId();
 };

@@ -1,6 +1,6 @@
 #include "ExpensesFile.h"
 
-bool ExpensesFile::writeExpenseToFile(Expense expense) {
+void ExpensesFile::writeExpenseToFile(Expense expense) {
     string date = dateManager.intToStringDate(expense.getDate());
     string stringAmount = AuxiliaryMethods::conversionFloatToString(expense.getAmount());
 
